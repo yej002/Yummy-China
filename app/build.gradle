@@ -1,0 +1,98 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "edu.northeastern.numad22fateam26"
+        minSdk 27
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_9
+        targetCompatibility JavaVersion.VERSION_1_9
+    }
+    android {
+        lint {
+            baseline = file("lint-baseline.xml")
+        }
+    }
+}
+
+dependencies {
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:31.1.0')
+    // Add the dependency for the Firebase Authentication library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.firebase:firebase-functions'
+    // FirebaseUI for Cloud Firestore
+    implementation 'com.firebaseui:firebase-ui-firestore:8.0.2'
+
+
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+
+    implementation 'com.google.android.gms:play-services-auth:20.4.0'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    implementation 'com.airbnb.android:lottie:5.2.0'
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    implementation 'com.squareup.picasso:picasso:2.8'
+
+    implementation 'com.google.code.gson:gson:2.9.1'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
+
+    // HTTP library auto scheduling of networking requests
+    implementation 'com.android.volley:volley:1.2.1'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+
+    implementation 'com.karumi:dexter:6.2.2'
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.X.X'
+    implementation 'com.github.MarsadMaqsood:StylishDialogs:0.1.7'
+
+    //implementation("com.vanniktech:android-image-cropper:4.5.0")
+    api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+    implementation 'com.github.a914-gowtham:android-video-trimmer:1.7.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    implementation 'com.github.dmytrodanylyk:android-morphing-button:1.0'
+}

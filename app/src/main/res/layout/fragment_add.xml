@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".finalProject.fragments.Add"
+    tools:ignore="UnusedAttribute"
+    tools:targetApi="m">
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/titletext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/fuzzybubblesbold"
+            android:text="Yummy China"
+            android:textColor="@color/fog_red"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/titletext"
+            android:src="@drawable/search_content2" />
+
+        <ImageButton
+            android:id="@+id/nextBtn"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@drawable/ic_circle"
+            android:elevation="3dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="4dp"
+            android:src="@drawable/ic_send"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/descriptionET"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/text_box"
+                android:fontFamily="@font/fuzzybubblesregular"
+                android:hint="  Say Something About This Post"
+                android:minLines="8" />
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@id/descriptionET"
+                android:background="@color/colorAccent"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/descriptionET"
+                android:text="Photos from your local gallery:"
+                android:fontFamily="@font/fuzzybubblesregular"
+                android:contentDescription="@null" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

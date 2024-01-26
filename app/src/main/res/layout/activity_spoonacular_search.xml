@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:autofillHints="Food name"
+    tools:context=".spoonacular.SpoonacularSearchActivity">
+
+    <EditText
+        android:id="@+id/editTextTextDishName"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/custom_input"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:hint="@string/input_reminder"
+        android:textSize="15dp"
+        android:fontFamily="@font/fuzzybubblesregular"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingStart="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/startSearchbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85" />
+
+    <TextView
+        android:id="@+id/caltext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:fontFamily="@font/fuzzybubblesregular"
+        android:paddingTop="20dp"
+        android:text="Range of Calories:"
+        android:textStyle="bold"
+        android:textColor="@color/orange"
+        app:layout_constraintBottom_toTopOf="@+id/range_slider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextDishName"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/range_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:contentDescription="@string/slider_desc"
+        android:stepSize="100.00"
+        android:value="800.0"
+        android:valueFrom="100.0"
+        android:valueTo="2000.00"
+        app:haloColor="@color/orange"
+        app:layout_constraintBottom_toTopOf="@+id/number_slider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextDishName"
+        app:layout_constraintVertical_bias="0.56"
+        app:values="@array/initial_slider_values" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fuzzybubblesregular"
+        android:paddingTop="30dp"
+        android:text="Number of recipes to display:"
+        android:textStyle="bold"
+        android:textColor="@color/orange"
+        app:layout_constraintBottom_toTopOf="@+id/number_slider"
+        app:layout_constraintStart_toStartOf="@+id/caltext"
+        app:layout_constraintTop_toBottomOf="@+id/range_slider" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/number_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:contentDescription="@string/slider_desc"
+        android:stepSize="1.00"
+        android:value="9.0"
+        android:valueFrom="1.0"
+        android:valueTo="30.00"
+        app:haloColor="@color/orange"
+        app:labelBehavior="visible"
+        app:layout_constraintBottom_toTopOf="@+id/startSearchbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextDishName"
+        app:layout_constraintVertical_bias="0.735"
+        app:values="@array/initial_slider_values" />
+
+    <Button
+        android:id="@+id/startSearchbtn"
+        android:layout_width="340dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="150dp"
+        android:onClick="startSearch"
+        android:text="Search"
+        android:fontFamily="@font/fuzzybubblesbold"
+        android:background="@drawable/button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextDishName" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="back"
+        android:src="@drawable/back_ic"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextDishName"
+        app:layout_constraintEnd_toStartOf="@+id/lottieAnimationView"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41" />
+
+    <CheckBox
+        android:id="@+id/veganCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fuzzybubblesregular"
+        android:text="Vegan"
+        app:layout_constraintBottom_toTopOf="@+id/startSearchbtn"
+        app:layout_constraintEnd_toStartOf="@+id/glutenCheckBox"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/glutenCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fuzzybubblesregular"
+        android:text="Gluten-free"
+        app:layout_constraintEnd_toStartOf="@+id/ketoCheckBox"
+        app:layout_constraintStart_toEndOf="@+id/veganCheckBox"
+        app:layout_constraintBottom_toTopOf="@+id/startSearchbtn"
+        app:layout_constraintTop_toTopOf="@+id/veganCheckBox" />
+
+    <CheckBox
+        android:id="@+id/ketoCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fuzzybubblesregular"
+        android:text="Keto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/startSearchbtn"
+        app:layout_constraintStart_toEndOf="@+id/glutenCheckBox"
+        app:layout_constraintTop_toTopOf="@+id/glutenCheckBox" />
+
+    <TextView
+        android:id="@+id/findRecipetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/fuzzybubblesbold"
+        android:text="FIND RECIPE"
+        android:textColor="@color/orange"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextDishName"
+        app:layout_constraintEnd_toStartOf="@+id/lottieAnimationView"
+        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.318" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextDishName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.205"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/pumpkin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

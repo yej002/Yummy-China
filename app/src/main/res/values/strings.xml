@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">NUMAD22FaTeam26</string>
+    <string name="search_your_recipes">Search Your Recipes…</string>
+    <string name="recipes">Recipes</string>
+    <string name="country">Country</string>
+    <string name="instructions">INSTRUCTIONS</string>
+    <string name="dot_loading">...</string>
+    <string name="Ingredients">INGREDIENTS</string>
+    <string name="youtube">YOUTUBE</string>
+    <string name="source">SOURCE</string>
+    <string name="favorite">Favorite</string>
+    <string name="ournames">Xinyi~Jing~Jason~Mozhi</string>
+    <string name="slider_desc">Calories</string>
+    <string name="input_reminder">(optional) Enter keyword here. e.g. pasta</string>
+    <string name="Xinyigithub"><a href="https://github.com/FentPams">Github link</a></string>
+    <string name="JingGithubLink"><a href="https://github.com/yej002">Github link</a></string>
+
+    <string name="MozhiGithubLink"><a href="https://github.com/Mozhi21">Github link</a></string>
+    <string name="JasonGithub"><a href="https://github.com/HaozheZhang0818">Github link</a></string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="cuisine_of_the_day">Cuisine of The Day</string>
+    <string name="cuisine_of_the_day_pic">Cuisine of the day pic</string>
+    <string name="detailed_recipe">Detailed Recipe</string>
+    <string name="no_recipe_found">No recipe found!</string>
+    <string name="relevant_posts">Relevant Posts</string>
+
+    <string name="yummy_china">Yummy China</string>
+
+    <string name="first_slide_title">Explore Chinese authentic cuisines</string>
+    <string name="second_slide_title">Find and follow your foodie mates</string>
+    <string name="third_slide_title">Discover recipes</string>
+
+    <string name="first_slide_desc">Endless dishes far beyond your imagination! </string>
+    <string name="second_slide_desc">Follow your foodie friends, see what they are posting!</string>
+
+    <string name="third_slide_desc">Want to cook your own Chinese food? Lets do it!</string>
+
+
+</resources>
