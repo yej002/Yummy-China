@@ -1,5 +1,7 @@
 # NUMAD22FaTeam26 -- Yummy China
 
+Original repository: https://github.com/Mozhi21/NUMAD22FaTeam26
+
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=F77752&width=435&lines=A+playground+for+foodies!)](https://git.io/typing-svg)
 
 <div  align="center"> 
